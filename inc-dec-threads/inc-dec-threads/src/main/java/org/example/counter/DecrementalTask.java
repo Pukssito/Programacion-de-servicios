@@ -1,23 +1,24 @@
-package org.example;
+package org.example.counter;
 
-public class IncrementalTask implements Runnable {
+public class DecrementalTask implements Runnable {
 
     private final Counter counter;
 
-    public IncrementalTask(Counter counter) {
+    public DecrementalTask(Counter counter) {
         this.counter = counter;
     }
 
     @Override
     public void run() {
         while(counter.getValue() != 0) {
-            counter.increment();
+            counter.decrement();
 
             try {
-                Thread.sleep(20);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+            System.out.println(counter.getValue());
         }
     }
 }

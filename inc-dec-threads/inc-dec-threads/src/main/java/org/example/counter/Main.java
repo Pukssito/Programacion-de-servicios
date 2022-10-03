@@ -1,4 +1,4 @@
-package org.example;
+package org.example.counter;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,6 +25,6 @@ public class Main {
         // value = 3
         // value = 1
 
-        System.out.println(counter.getValue());
+        System.out.println("fin de programa");
     }
 }
