@@ -1,0 +1,15 @@
+{
+  "nombre": "Federica Montseny",
+  "estudiantes": [
+    {
+      "nombre":"Peppa",
+      "apellidos":"Pig",
+      "edad": 20
+    },
+    {
+      "nombre":"Bob",
+      "apellidos":"Esponja",
+      "edad": 22
+    }
+  ]
+}
