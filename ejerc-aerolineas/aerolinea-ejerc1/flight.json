@@ -1,0 +1,30 @@
+{
+
+  "origen": "Buenos Aires",
+    "destino": "Madrid",
+    "fecha": "2019-12-12",
+  "pasajeros": [
+
+      "Juan Perez",
+      "Maria Lopez"
+  ],
+
+
+  "origen": "Madrid",
+  "destino": "Barcelona",
+  "fecha": "2019-10-10",
+  "pasajeros": [
+
+    "Perico Palotes",
+    "Carmen Paredes"
+  ],
+
+  "origen": "Dubai",
+  "destino": "Madrid",
+  "fecha": "2019-08-09",
+  "pasajeros": [
+
+    "Juan Perez",
+    "Maria Lopez"
+  ]
+}
