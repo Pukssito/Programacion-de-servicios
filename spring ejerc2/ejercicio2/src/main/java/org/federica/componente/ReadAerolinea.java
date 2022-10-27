@@ -3,24 +3,28 @@ package org.federica.componente;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.federica.entity.Aerolinea;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.io.IOException;
+
 @AllArgsConstructor
 public class ReadAerolinea {
 
-    private static final Logger log = LoggerFactory.getLogger(ReadAerolinea.class);
+
 
     private String PATH;
+    private ObjectMapper objectMapper;
 
 
-    public Aerolinea mapeaAerolinea() throws JsonProcessingException {
+    public Aerolinea mapeaAerolinea() throws IOException {
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        Aerolinea aerolinea = objectMapper.readValue("{\"nombre\": \"flyEmirates\"}",Aerolinea.class);
-        System.out.println("hola");
-        System.out.println(aerolinea);
+
+        Aerolinea aerolinea = objectMapper.readValue(new File(PATH), Aerolinea.class);
+
         return aerolinea;
     }
 }

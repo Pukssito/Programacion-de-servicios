@@ -1,0 +1,6 @@
+2022-10-27 12:19:04 WARN  AnnotationConfigApplicationContext:591 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'readAerolinea' defined in org.federica.configuracion.AerolineaConfiguration: Unsatisfied dependency expressed through method 'readAerolinea' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-10-27 12:28:16 INFO  ProgramAerolinea:27 - Introduce un origen
+2022-10-27 12:28:46 INFO  ProgramAerolinea:27 - Introduce un origen
+2022-10-27 12:35:26 INFO  ProgramAerolinea:27 - Introduce un origen
+2022-10-27 12:36:39 INFO  ProgramAerolinea:27 - Introduce un origen
+2022-10-27 12:37:44 INFO  ProgramAerolinea:27 - Introduce un origen
