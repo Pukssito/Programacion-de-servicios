@@ -18,6 +18,7 @@ public class MemberConfiguration {
     public Scanner scanner() {
         return new Scanner(System.in);
     }
+    @Bean
     public MemberReader memberReader(Scanner scanner) {
         return new MemberReader(scanner);
     }

@@ -25,7 +25,6 @@ public class MemberReader {
         String surname = scanner.nextLine();
         log.info("Introduce codigo postal del miembro");
         int postalCode = scanner.nextInt();
-        scanner.nextLine();
         return new Member(dni,name,surname,postalCode);
     }
 

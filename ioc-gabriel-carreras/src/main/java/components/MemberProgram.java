@@ -29,7 +29,9 @@ public class MemberProgram {
                 case 2:
                     System.out.println("Introduce el DNI del socio a eliminar");
                     String dni = scanner.nextLine();
+                    scanner.nextLine();
                     memberStorage.removeMember(dni);
+                    System.out.println("Socio eliminado");
                     break;
                 case 3:
                     memberStorage.listMembers();
