@@ -25,7 +25,7 @@ public class ArticleDto {
 
 
 
-    public static ArticleDto toDto(Object article) {
+    public static ArticleDto toDto(Article article) {
         return new ArticleDto(
                 article.getId(),
                 article.getTitle(),

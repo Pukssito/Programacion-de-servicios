@@ -1,14 +1,16 @@
 package service;
 
+import org.iesfm.newspaper.controllers.dto.ArticleDto;
 import org.iesfm.newspaper.dao.ArticleDAO;
 import org.iesfm.newspaper.dao.SectionDAO;
-import org.iesfm.newspaper.dao.inmemory.InMemoryArticleDAO;
 import org.iesfm.newspaper.entity.Article;
 import org.iesfm.newspaper.entity.Section;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import service.exceptions.ArticleNotFoundException;
+import service.exceptions.SectionNotFoundException;
 
-import java.util.Arrays;
+import javax.validation.Valid;
 import java.util.List;
 
 @Service
@@ -41,7 +43,16 @@ public class SectionService {
         return articleDAO.list();
     }
 
-    public List<Article> listArticlesBySection(int id) {
-        return articleDAO.listSectionArticles(id);
+    public List<Article> listArticlesBySection(int id, String autor) {
+        return articleDAO.listSectionArticles(id, autor);
     }
-}
+
+    public void addArticle(Article article) throws SectionNotFoundException, ArticleNotFoundException {
+            if (sectionDAO.getSection(article.getSectionId()) == null) {
+                throw new SectionNotFoundException(article.getSectionId());
+            } else if (!articleDAO.add(article)) {
+                throw new ArticleNotFoundException(article.getSectionId());
+            }
+        }
+    }
+
